@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid Mubarak Ultra Premium 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Space+Grotesk:wght@700&family=El+Messiri:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #0a081a;
+            --surface-glass: rgba(20, 16, 48, 0.55);
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --neon-primary: #8b5cf6; 
+            --neon-cyan: #00f5d4;    
+            --neon-pink: #ff007f;    
+            --text-main: #f8f9fa;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-base);
+            background-image: 
+                radial-gradient(at 5% 15%, rgba(139, 92, 246, 0.25) 0px, transparent 45%),
+                radial-gradient(at 95% 85%, rgba(0, 245, 212, 0.2) 0px, transparent 45%),
+                radial-gradient(at 50% 50%, rgba(255, 0, 127, 0.15) 0px, transparent 50%);
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: var(--text-main);
+        }
+
+        ::-webkit-scrollbar {
+            width: 0px; 
+            background: transparent;
+        }
+
+        /* ===== 🎬 شاشة دخول سينمائية فاخرة ومبهجة ===== */
+        #welcome-screen {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at center, #130f35 0%, #06050f 100%);
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            z-index: 9999;
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* 🐑 الخروف الهندسي العصري المبهج بالـ CSS (الشيك جداً) */
+        .modern-geometric-sheep {
+            position: relative;
+            width: 130px; height: 85px;
+            background: linear-gradient(135deg, #ffffff, #e2e8f0);
+            border-radius: 50px;
+            animation: superBounce 0.8s infinite alternate ease-in-out;
+        }
+        .modern-geometric-sheep::before {
+            content: ''; position: absolute;
+            top: 15px; left: -25px;
+            width: 48px; height: 48px;
+            background: #17123a;
+            border-radius: 50% 50% 0 50%;
+            border: 3px solid #fff;
+        }
+        .modern-geometric-sheep::after {
+            content: ''; position: absolute;
+            top: 8px; left: -12px;
+            width: 25px; height: 12px;
+            background: #fff;
+            border-radius: 20px;
+            transform: rotate(-15deg);
+        }
+
+        @keyframes superBounce {
+            0% { transform: translateY(0) scale(1) rotate(-4deg); filter: drop-shadow(0 0 15px rgba(0, 245, 212, 0.6)); }
+            100% { transform: translateY(-25px) scale(1.08) rotate(4deg); filter: drop-shadow(0 0 30px rgba(255, 0, 127, 0.8)); }
+        }
+
+        .welcome-title {
+            font-family: 'El Messiri', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin-top: 40px;
+            text-align: center;
+            padding: 0 20px;
+            background: linear-gradient(to right, #fff, var(--neon-cyan), var(--neon-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(0, 245, 212, 0.2);
+        }
+
+        .btn-premium-launch {
+            background: linear-gradient(135deg, var(--neon-cyan) 0%, #00b4d8 100%);
+            color: #06050f;
+            border: none;
+            padding: 16px 50px;
+            font-size: 20px;
+            font-weight: 900;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 35px;
+            font-family: 'El Messiri', sans-serif;
+            box-shadow: 0 8px 25px rgba(0, 245, 212, 0.4), 0 0 0 4px rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .btn-premium-launch:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 12px 30px rgba(255, 0, 127, 0.5), 0 0 0 6px rgba(255, 255, 255, 0.2);
+            background: linear-gradient(135deg, var(--neon-pink) 0%, #d90429 100%);
+            color: #fff;
+        }
+
+        /* ===== 🌌 الكون الرئيسي والصفحات المتتالية ===== */
+        .main-container {
+            display: none; width: 100%; opacity: 0; transition: opacity 0.8s ease;
+        }
+
+        .eid-section {
+            width: 100%; min-height: 100vh;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            padding: 40px 20px 110px 20px; box-sizing: border-box; position: relative;
+        }
+
+        .section-header-sheep-wrapper {
+            margin-bottom: 20px;
+            transform: scale(0.65);
+            filter: drop-shadow(0 0 15px var(--neon-cyan));
+        }
+
+        .premium-glass-card {
+            background: var(--surface-glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border-glass);
+            border-radius: 40px;
+            padding: 50px 40px;
+            text-align: center;
+            width: 100%; max-width: 850px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 
+                        inset 0 1px 1px rgba(255,255,255,0.15),
+                        0 0 40px rgba(139, 92, 246, 0.05);
+            position: relative;
+            transition: border-color 0.4s ease;
+        }
+        .premium-glass-card:hover {
+            border-color: rgba(0, 245, 212, 0.3);
+        }
+
+        .card-tag {
+            font-size: 13px; font-weight: 900; letter-spacing: 2px;
+            color: #06050f; margin-bottom: 25px; display: inline-block;
+            background: linear-gradient(90deg, var(--neon-cyan), #00b4d8); 
+            padding: 6px 20px; border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 245, 212, 0.3);
+        }
+
+        .main-title {
+            font-family: 'El Messiri', sans-serif;
+            font-size: 48px; font-weight: 900; margin: 0;
+            background: linear-gradient(135deg, #ffffff 40%, var(--neon-primary));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
+        }
+
+        .love-name {
+            font-size: 38px; font-weight: 900; 
+            color: var(--neon-pink); margin: 12px 0 25px 0;
+            text-shadow: 0 0 15px rgba(255, 0, 127, 0.3);
+            display: block;
+        }
+
+        /* 📸 برواز الصورة المتوهج اللامع */
+        .image-holder-container {
+            width: 240px; height: 240px; margin: 0 auto 30px auto;
+            border-radius: 30px; overflow: hidden;
+            background: #0f0d25; border: 2px solid rgba(255,255,255,0.1);
+            position: relative; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6), 0 0 25px rgba(0, 245, 212, 0.15);
+            transform: rotate(1.5deg);
+            transition: all 0.4s;
+        }
+        .image-holder-container:hover {
+            transform: rotate(0deg) scale(1.03);
+            border-color: var(--neon-cyan);
+            box-shadow: 0 15px 45px rgba(0,0,0,0.7), 0 0 35px rgba(0, 245, 212, 0.3);
+        }
+        .image-holder-container img { width: 100%; height: 100%; object-fit: cover; }
+        .image-placeholder-text {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            color: #828799; font-size: 13px; font-weight: 700; text-align: center; line-height: 1.6;
+        }
+
+        .large-text {
+            font-size: 19px; color: #cbd5e1; line-height: 1.9; font-weight: bold; max-width: 650px; margin: 0 auto;
+        }
+
+        /* العداد الرقمي المتوهج الشيك جداً */
+        .fatta-timer-digital {
+            display: flex; justify-content: center; gap: 35px; margin-top: 40px;
+        }
+        .timer-plate {
+            text-align: center; position: relative;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 15px 25px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+            min-width: 90px;
+            box-shadow: inset 0 1px 1px rgba(255,255,255,0.05);
+        }
+        .timer-plate::after {
+            content: ''; position: absolute; bottom: 0; left: 10%; width: 80%; height: 3px;
+            background: var(--neon-cyan); border-radius: 10px; box-shadow: 0 0 10px var(--neon-cyan);
+        }
+        .timer-plate:nth-child(even)::after {
+            background: var(--neon-pink); box-shadow: 0 0 10px var(--neon-pink);
+        }
+        .plate-num {
+            font-family: 'Space Grotesk', sans-serif; font-size: 56px; font-weight: 700;
+            line-height: 1; display: block;
+            background: linear-gradient(to bottom, #ffffff, #cbd5e1);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .plate-lbl {
+            font-size: 13px; font-weight: 900; color: #94a3b8;
+            letter-spacing: 1px; margin-top: 10px; display: block;
+        }
+
+        /* كروت الاستيكرات الفخمة الملونة (متقسمة على الصفحات) */
+        .sticker-card-premium {
+            background: white;
+            border: 4px solid var(--bg-base);
+            border-radius: 28px;
+            padding: 35px;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 10px 10px 0px var(--bg-base), 0 15px 30px rgba(0,0,0,0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            text-align: right;
+        }
+        .sticker-card-premium:hover {
+            transform: scale(1.06) translateY(-12px) !important;
+            box-shadow: 14px 14px 0px var(--neon-cyan);
+            border-color: var(--neon-primary);
+        }
+
+        .p-pos-1 { background-color: #fff0f3; transform: rotate(-2.5deg); }
+        .p-pos-2 { background-color: #e8f8f5; transform: rotate(2deg); }
+        .p-pos-3 { background-color: #eef2ff; transform: rotate(-2deg); }
+        .p-pos-4 { background-color: #fef9e7; transform: rotate(2.5deg); }
+
+        .card-headline {
+            font-weight: 900; font-size: 21px; color: var(--neon-primary);
+            border-bottom: 3px dashed var(--neon-pink);
+            padding-bottom: 8px; margin-bottom: 15px;
+            display: flex; align-items: center; gap: 8px;
+            font-family: 'El Messiri', sans-serif;
+        }
+        .card-paragraph { font-size: 16px; line-height: 1.8; color: var(--bg-base); font-weight: 700; margin: 0; }
+
+        /* أزرار الانتقال السهمية النيون */
+        .next-section-btn {
+            position: absolute; bottom: 35px; left: 50%; transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.03); 
+            border: 1px solid rgba(255,255,255,0.12);
+            color: #fff; width: 55px; height: 55px; border-radius: 50%;
+            cursor: pointer; display: flex; justify-content: center; align-items: center;
+            transition: all 0.3s; z-index: 99;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-size: 24px;
+        }
+        .next-section-btn:hover {
+            border-color: var(--neon-cyan);
+            background: rgba(0, 245, 212, 0.1);
+            color: var(--neon-cyan);
+            transform: translateX(-50%) translateY(5px) scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 245, 212, 0.3);
+        }
+
+        /* تأثيرات جزيئات النيون والاحتفالات الجانبية */
+        .digital-particle {
+            position: absolute; width: 5px; height: 5px; background: #fff;
+            border-radius: 50%; pointer-events: none; opacity: 0;
+            animation: floatParticle linear forwards;
+        }
+        @keyframes floatParticle {
+            0% { transform: translateY(0) scale(1) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
+            100% { transform: translateY(-85vh) scale(0.4) rotate(360deg); opacity: 0; }
+        }
+
+        .celebration-particle {
+            position: absolute; font-size: 45px; pointer-events: none;
+            animation: chaoticFall linear forwards; z-index: 20;
+        }
+        @keyframes chaoticFall {
+            0% { transform: translateY(-60px) translateX(0) rotate(0deg); opacity: 1; }
+            50% { transform: translateX(30px) rotate(180deg); }
+            100% { transform: translateY(105vh) translateX(-30px) rotate(360deg); opacity: 0; }
+        }
+
+        .baa-word {
+            position: fixed; color: var(--neon-cyan); font-weight: 900; font-size: 30px;
+            border: 3px solid var(--bg-base); background: var(--neon-primary);
+            padding: 8px 20px; border-radius: 15px; box-shadow: 5px 5px 0 #fff;
+            animation: popOutWord 0.6s ease-out forwards; z-index: 1000; pointer-events: none;
+            font-family: 'El Messiri', sans-serif;
+        }
+        @keyframes popOutWord {
+            0% { transform: scale(0) translateY(0); opacity: 1; }
+            100% { transform: scale(1.3) translateY(-60px); opacity: 0; }
+        }
+
+        @media (max-width: 768px) {
+            .premium-glass-card { padding: 35px 20px; width: 92%; border-radius: 30px; }
+            .main-title { font-size: 32px; }
+            .love-name { font-size: 28px; }
+            .fatta-timer-digital { gap: 15px; }
+            .timer-plate { min-width: 70px; padding: 12px; }
+            .plate-num { font-size: 38px; }
+            .sticker-card-premium { max-width: 92% !important; transform: rotate(1deg) !important; margin: 12px 0; }
+            .eid-section { padding-bottom: 95px; }
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="eid-song" src="aud1.mpeg" loop></audio>
+
+    <div id="welcome-screen">
+        <div class="modern-geometric-sheep"></div>
+        <h1 class="welcome-title">أهلاً أهلاً يا عيد.. فجر العيدية والمزيكا! 🚀</h1>
+        <button class="btn-premium-launch" onclick="launchFestival()">انطلق الآن! ✨🎉</button>
+    </div>
+
+    <div class="main-container" id="mega-universe">
+        
+        <section class="eid-section" id="page-1">
+            <div class="section-header-sheep-wrapper">
+                <div class="modern-geometric-sheep"></div>
+            </div>
+            <div class="premium-glass-card">
+                <span class="card-tag">GREETINGS • تهنئة خاصة</span>
+                <h1 class="main-title">عيد أضحى مبارك وسعيد</h1>
+                <span class="love-name">يا حتة من قلبي ❤️</span>
+                
+                <div class="image-holder-container">
+                    <div class="image-holder-container">
+    <img src="phot1.jpeg" alt="صورة الذكرى">
+</div>
+
+                <p class="large-text">
+                    كل سنة وأنتِ منورة دنيتي، العيد معاكي ليه طعم تاني خالص مبهج وفرفوش زي أغنية العيد دي! جهزي نفسك لأحلى أيام فرفشة وضحك وخروجات سوا! 🐑🎈
+                </p>
+
+                <button style="background:var(--neon-pink); color:white; border:3px solid #fff; padding:12px 30px; font-size:18px; font-weight:900; border-radius:20px; cursor:pointer; box-shadow:5px 5px 0 var(--bg-base); margin-top:25px; font-family: 'Cairo', sans-serif; transition: 0.2s;" onclick="makeSheepBleat(event)">اضغطي هنا عشان الخروف يئعّي! 🔊</button>
+            </div>
+            <button class="next-section-btn" onclick="scrollToPage('page-2')">▼</button>
+        </section>
+
+        <section class="eid-section" id="page-2">
+            <div class="section-header-sheep-wrapper" style="filter: drop-shadow(0 0 15px var(--neon-pink));">
+                <div class="modern-geometric-sheep"></div>
+            </div>
+            <div class="premium-glass-card" style="max-width: 750px;">
+                <span class="card-tag" style="background: linear-gradient(90deg, var(--neon-pink), var(--neon-primary)); color: white; box-shadow: 0 4px 15px rgba(255, 0, 127, 0.3);">COUNTDOWN • العداد المظبوط</span>
+                <h1 class="main-title" style="font-size: 38px; background: linear-gradient(135deg, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">الوقت المتبقي على صينية الفتة واللحمة</h1>
+                
+                <div class="fatta-timer-digital">
+                    <div class="timer-plate"><span class="plate-num" id="d-box">00</span><span class="plate-lbl">أيام / DAYS</span></div>
+                    <div class="timer-plate"><span class="plate-num" id="h-box">00</span><span class="plate-lbl">ساعات / HOURS</span></div>
+                    <div class="timer-plate"><span class="plate-num" id="m-box">00</span><span class="plate-lbl">دقائق / MINS</span></div>
+                </div>
+            </div>
+            <button class="next-section-btn" onclick="scrollToPage('page-3')">▼</button>
+        </section>
+
+        <section class="eid-section" id="page-3">
+            <span class="card-tag" style="margin-bottom: 35px;">MEMORIES • ذكريات مبهجة</span>
+            <div style="display:flex; justify-content:center; gap:25px; flex-wrap:wrap; width:100%; max-width:1000px;">
+                <div class="sticker-card-premium p-pos-1">
+                    <div class="card-headline">🐑 حقيقة اللحمة:</div>
+                    <p class="card-paragraph">بيقولك الخروف الكيوت بيبان من مشيته، وأنا الصراحة من أول يوم شوفتك فيه عرفت إن وجودك في حياتي هو أحلى وأغلى عيدية!</p>
+                </div>
+                <div class="sticker-card-premium p-pos-2">
+                    <div class="card-headline">📊 إحصائيات الحب:</div>
+                    <p class="card-paragraph">تم التأكيد رسمياً: غلاوتك في قلبي عدت نسبة الدهون في صينية الرقاق باللحمة المفرومة! يعني مفيش منافسة السنادي. 😂</p>
+                </div>
+            </div>
+            <button class="next-section-btn" onclick="scrollToPage('page-4')">▼</button>
+        </section>
+
+        <section class="eid-section" id="page-4">
+            <span class="card-tag" style="margin-bottom: 35px;">PROMISES • عهود مستمرة</span>
+            <div style="display:flex; justify-content:center; gap:25px; flex-wrap:wrap; width:100%; max-width:1000px; margin-bottom:40px;">
+                <div class="sticker-card-premium p-pos-3">
+                    <div class="card-headline">🗺️ خطة الأيام:</div>
+                    <p class="card-paragraph">الخطة كالآتي: أول يوم نوم وفتة، تاني يوم خروجة وفسحة ولف في الشوارع، وتالت يوم نعد العيدية سوا وناكل لحمة تاني! 🥩🤝</p>
+                </div>
+                <div class="sticker-card-premium p-pos-4">
+                    <div class="card-headline">🔒 عهد العيد:</div>
+                    <p class="card-paragraph">في الأيام المبروكة دي، بوعدك نفضل دايماً سوا وسند لبعض في كل كود وبروجكت وفي كل لحظة فرفشة وضحك. عيد سعيد عليكي يا روحي! ❤️</p>
+                </div>
+            </div>
+            <h1 class="main-title" style="font-size:42px; color:var(--neon-cyan); text-shadow:3px 3px 0px var(--neon-primary); text-align:center; font-family:'El Messiri';">و كل عيد و إحنا دايماً مع بعض! 🎉</h1>
+        </section>
+
+    </div>
+
+    <script>
+        function launchFestival() {
+            // تشغيل الأغنية فوراً بأمان مصلحة متقفل
+            try {
+                const song = document.getElementById('eid-song');
+                song.play().catch(error => console.log("تحتاج لتفاعل لتشغيل الصوت:", error));
+            } catch (e) {
+                console.log("Audio process safe.");
+            }
+
+            // اختفاء شاشة الترحيب السينمائية
+            const screen = document.getElementById('welcome-screen');
+            screen.style.transform = 'scale(1.15) translateY(-20px)';
+            screen.style.opacity = '0';
+            setTimeout(() => screen.style.display = 'none', 800);
+
+            // إظهار الكون الرئيسي المبهج
+            const universe = document.getElementById('mega-universe');
+            universe.style.display = 'block';
+            setTimeout(() => universe.style.opacity = '1', 50);
+
+            // إطلاق جزيئات الخلفية الحية ومدفع الحفلات معاً لبهجة مطلقة
+            setInterval(spawnNeonParticle, 120);
+            setInterval(fireCelebrationGun, 180);
+        }
+
+        // دالة السكرول السلس المضمونة والآمنة لجميع شاشات الويب والموبايلات
+        function scrollToPage(pageId) {
+            const targetElement = document.getElementById(pageId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start' 
+                });
+            }
+        }
+
+        function spawnNeonParticle() {
+            const p = document.createElement('div');
+            p.classList.add('digital-particle');
+            p.style.left = Math.random() * 100 + 'vw';
+            p.style.bottom = '-10px';
+            
+            const neonColors = ['#8b5cf6', '#00f5d4', '#ff007f', '#ffffff', '#00b4d8'];
+            const chosenColor = neonColors[Math.floor(Math.random() * neonColors.length)];
+            p.style.background = chosenColor;
+            p.style.boxShadow = `0 0 12px ${chosenColor}, 0 0 4px #fff`;
+            
+            p.style.width = (Math.random() * 5 + 3) + 'px';
+            p.style.height = p.style.width;
+            p.style.animationDuration = (Math.random() * 4 + 3.5) + 's';
+            
+            document.body.appendChild(p);
+            setTimeout(() => { p.remove(); }, 7500);
+        }
+
+        function fireCelebrationGun() {
+            const elementsPool = ['🐑', '🐏', '🎈', '🎉', '❤️', '🥩', '✨', '🍿'];
+            const randomItem = elementsPool[Math.floor(Math.random() * elementsPool.length)];
+            
+            const item = document.createElement('div');
+            item.classList.add('celebration-particle');
+            item.innerText = randomItem;
+            
+            item.style.left = Math.random() * 100 + 'vw';
+            item.style.animationDuration = (Math.random() * 3 + 2.2) + 's';
+            item.style.fontSize = (Math.random() * 20 + 25) + 'px';
+            
+            document.body.appendChild(item);
+            setTimeout(() => { item.remove(); }, 5500);
+        }
+
+        function makeSheepBleat(event) {
+            const word = document.createElement('div');
+            word.classList.add('baa-word');
+            word.innerText = 'أهلاً أهلاً يا عيد! 🎶🐑';
+            
+            word.style.left = (event.clientX - 50) + 'px';
+            word.style.top = (event.clientY - 20) + 'px';
+            
+            document.body.appendChild(word);
+            setTimeout(() => { word.remove(); }, 600);
+        }
+
+        // العداد التنازلي التمام المظبوط على تاريخ 27 مايو 2026 بالملي
+        const exactTargetDate = new Date('May 27, 2026 00:00:00').getTime();
+        
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = exactTargetDate - now;
+            
+            if (diff < 0) {
+                document.querySelector('.fatta-timer-digital').innerHTML = "<h2 style='color:var(--neon-cyan); font-family:El Messiri; font-size:28px;'>العيد منور والفتة جهزت طحن! 🎉🥩</h2>";
+                return;
+            }
+
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+            document.getElementById('d-box').innerText = d < 10 ? '0' + d : d;
+            document.getElementById('h-box').innerText = h < 10 ? '0' + h : h;
+            document.getElementById('m-box').innerText = m < 10 ? '0' + m : m;
+        }, 1000);
+    </script>
+</body>
+</html>
+ 
+            
